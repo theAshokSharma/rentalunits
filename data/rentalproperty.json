@@ -1,0 +1,76 @@
+{
+"rental_data": [
+        {
+            "property_shortname": "MGR17732",
+            "address_line1": "17732 96th Avenue N",
+            "address_line2": "",
+            "city": "Maple Grove",
+            "state": "MN",
+            "zipcode": "55311",
+            "county": "Hennepin",
+            "property_id": "07-119-22-41-0040",
+            "purchase_date": "2015/04/30",
+            "purchase_amount": 155000.00
+        },
+        {
+            "property_shortname": "BLN12444",
+            "address_line1": "12444 Johnson Street NE",
+            "address_line2": "",
+            "city": "Blaine",
+            "state": "MN",
+            "zipcode": "55434",
+            "county": "Hennepin",
+            "property_id": "08-31-23-21-010",
+            "purchase_date": "2016/04/01",
+            "purchase_amount": 149000.00
+        },
+        {
+            "property_shortname": "RGR23150",
+            "address_line1": "23150 Iris Ave",
+            "address_line2": "",
+            "city": "Roger",
+            "state": "MN",
+            "zipcode": "55374",
+            "county": "Hennepin",
+            "property_id": "15-120-23-24-0024",
+            "purchase_date": "2016/05/31",
+            "purchase_amount": 140000.00
+        },
+        {
+            "property_shortname": "RGR23111",
+            "address_line1": "23111 Iris Ct",
+            "address_line2": "",
+            "city": "Roger",
+            "state": "MN",
+            "zipcode": "55374",
+            "county": "Hennepin",
+            "property_id": "15-120-23-24-0033",
+            "purchase_date": "2016/09/13",
+            "purchase_amount": 145000.00
+        },
+        {
+            "property_shortname": "MGR17960",
+            "address_line1": "17960, 69th PL N",
+            "address_line2": "",
+            "city": "Maple Grove",
+            "state": "MN",
+            "zipcode": "55311",
+            "county": "Hennepin",
+            "property_id": "30-119-22-43-0031",
+            "purchase_date": "2018/04/04",
+            "purchase_amount": 201000.00
+        },
+        {
+            "property_shortname": "ELR17116",
+            "address_line1": "17116 Olson Court NW",
+            "address_line2": "",
+            "city": "Elk River",
+            "state": "MN",
+            "zipcode": "55330-4529",
+            "county": "Sherburne",
+            "property_id": "75-719-2606",
+            "purchase_date": "2019/05/15",
+            "purchase_amount": 172000.00
+        }
+    ]
+}

@@ -1,5 +1,8 @@
 __version__ = "1.0.0.0"
 
+import rentalunits.db.database
+import rentalunits.db.models
+
 import logging.config
 import pathlib
 import sys
