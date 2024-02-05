@@ -1,4 +1,14 @@
 {
-    "esbonio.sphinx.confDir": "",
-    "python.envFile": "${workspaceFolder}/.env"
+    "workbench.tree.indent": 15,
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.colorCustomizations": {
+        "tree.indentGuidesStroke": "#05EF3C"
+    },
+    "editor.rulers": [72, 110],      
+    "python.envFile": "${workspaceFolder}/.env",
+    "python.terminal.activateEnvironment": true,
+    "python.defaultInterpreterPath": ".venv/bin/python",
+    "flake8.args": [
+        "--max-line-length=110"
+    ]
 }

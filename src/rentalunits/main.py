@@ -1,19 +1,28 @@
+from fastapi import FastAPI
+import uvicorn
 import os
 
 from rentalunits import log, config
-from db.database import create_db_and_tables
+from rentalunits.db.database import create_db_and_tables
+from rentalunits.routers.v1 import propertyinfo_service
 
-logger = log()
+app = FastAPI()
+create_db_and_tables()
 
-def main():
-    logger.info("I am in main")
+app.include_router(propertyinfo_service.router)
 
-    app_config = config()
-    app_settings = app_config['SECTION 1']
-    user = app_settings['user']
-    color = os.environ.get('color', 'YELLOW')
-    print(user, color)
+
+@app.get("/")
+def root():
+    return {"message": "RentalUnits: 1.0.0.0"}
 
 
 if __name__ == '__main__':
-    main()
+    uvicorn.run("main:app",
+                host='127.0.0.1',
+                port=2428,
+                log_level="info",
+                reload=True,
+                ssl_keyfile="ssl/localhost.key",
+                ssl_certfile="ssl/localhost.crt")
+    print("running")

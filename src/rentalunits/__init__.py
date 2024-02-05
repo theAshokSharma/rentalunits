@@ -7,11 +7,16 @@ import logging.config
 import pathlib
 import sys
 import configparser
-
+from dotenv import load_dotenv
 import yaml
+import os.path
 
+abspath = os.path.abspath(os.path.dirname(__file__))
+if abspath not in sys.path:
+    sys.path.insert(0, abspath)
 
-LOGGING_CONFIG =  pathlib.Path(__file__).parent / "logger_config.yaml"
+load_dotenv()
+LOGGING_CONFIG = pathlib.Path(__file__).parent / "logger_config.yaml"
 
 with open(LOGGING_CONFIG) as f:
     config_dict = yaml.safe_load(f)

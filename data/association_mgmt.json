@@ -1,0 +1,48 @@
+{
+"association_mgmt_data": [
+	{
+		"company_name" : "New Concepts Group",
+		"short_name": "NCG",
+		"contact_name" : "",
+		"contact_phone" : "(952) 922-2500",
+		"contact_email" : "info@ncmgi.com",
+		"web_url" : "https://portal.newconceptsgroup.com/Home_v2/Login",
+		"web_username" : "marsinvestments.mn@gmail.com",
+		"web_pwd" : "VDB3bmhvbWUk",
+		"notes" : ""
+	},
+	{
+		"company_name" : "First Residential Service",
+		"short_name": "FRS",
+		"contact_name" : "",
+		"contact_phone" : "",
+		"contact_email" : "",
+		"web_url" : "https://www.clickpay.com/custom/fsr/login.html",
+		"web_username" : "marsinvestments",
+		"web_pwd" : "VDB3bmhvbWUk",
+		"notes" : "ClickPay ID: 6365073956"
+	},
+	{
+		"company_name" : "Cities Management",
+		"short_name": "CITIMGMT",
+		"contact_name" : "",
+		"contact_phone" : "",
+		"contact_email" : "",
+		"web_url" : "https://www3.senearthco.com/index.cfm?fuseaction=home.sign_in&mgtCompanyName=&association=",
+		"web_username" : "marsinvestments.mn@gmail.com",
+		"web_pwd" : "VDB3bmhvbWUk",
+		"notes" : ""
+	},
+	{
+		"company_name" : "Homefront Management",
+		"short_name": "HMFRNT",
+		"contact_name" : "Brad Catton",
+		"contact_phone" : "",
+		"contact_email" : "homefrontmgmnt@outlook.com",
+		"web_url" : "",
+		"web_username" : "",
+		"web_pwd" : "",
+		"notes" : "Homefront has no online presence."
+	}   
+    ]
+}
