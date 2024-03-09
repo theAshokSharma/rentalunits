@@ -1,0 +1,17 @@
+{
+    "lease_data": [
+        {
+            "lease_id": "",
+            "property_id": "",
+            "from_date": "2023/01/01",
+            "to_date": "2024/01/01",
+            "rent_amount": 1500.0,
+            "security_deposit": 2000.0,
+            "management_fee": 50,
+            "pets": "none",
+            "pets_deposit": 0.0,
+            "signed_document_url": "",
+            "notes":
+        },
+    ]
+}

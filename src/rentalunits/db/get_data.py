@@ -7,12 +7,14 @@ from sqlmodel import Session, select
 from rentalunits.db.database import engine
 from rentalunits.db.models import RentalProperty
 from rentalunits.db.models import AssociationManagement
+from rentalunits.db.models import Tenant
 from rentalunits.db.database import create_db_and_tables
 
 from rentalunits.db.models import RentalProperty
 
 RENTAL_DATA_FILE = pathlib.Path(__file__).parent.parent.parent.parent / "data/rentalproperty.json"
 MGMT_DATA_FILE = pathlib.Path(__file__).parent.parent.parent.parent / "data/association_mgmt.json"
+TENANT_DATA_FILE = pathlib.Path(__file__).parent.parent.parent.parent / "data/tenants.json"
 
 
 def get_renatlproperty_data() -> List:
@@ -75,7 +77,35 @@ def add_mgmt_data():
         session.commit()
 
 
+def get_tenant_data() -> List:
+    with open(TENANT_DATA_FILE, 'r') as f:
+        data = json.load(f)
+        tenant_data = data["tenant_data"]
+        tenant: List[Tenant] = [Tenant(**item) for item in tenant_data]
+        for item in tenant:
+            print(item.first_name,
+                  item.last_name)
+        return tenant
+
+
+def add_tenant_data():
+
+    data = get_tenant_data()
+
+    with Session(engine) as session:
+        for item in data:
+            statement = select(Tenant).\
+                where(Tenant.first_name == item.first_name).\
+                where(Tenant.last_name == item.last_name)
+            results = session.exec(statement)
+            rec = results.one_or_none()
+            if rec is None:
+                session.add(item)
+        session.commit()
+
+
 if __name__ == "__main__":
     create_db_and_tables()
-    add_mgmt_data()
-    add_rentalproperty()
+    # add_mgmt_data()
+    # add_rentalproperty()
+    add_tenant_data()

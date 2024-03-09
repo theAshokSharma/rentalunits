@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, status, HTTPException
+from fastapi.responses import JSONResponse
 from sqlmodel import Session, select
 from typing import List
-
 from rentalunits import log, config
 from rentalunits.db.database import get_session, engine
-from rentalunits.db.models import RentalProperty
+from rentalunits.db.models import RentalProperty, RentalPropertyRead
 
 router = APIRouter(
     prefix="/v1/rentalunit",
@@ -14,23 +14,22 @@ router = APIRouter(
 
 
 @router.get("/list",
-            response_model=List[RentalProperty],
+            response_model=List[RentalPropertyRead],
             status_code=status.HTTP_200_OK)
-def get_rental_property_list(*,
-                             session: Session = Depends(get_session)):
+async def get_rental_property_list(*,
+                                   session: Session = Depends(get_session)) -> List[RentalPropertyRead]:
     stmt = select(RentalProperty)
     rental_properties = session.exec(stmt).all()
-    # rental_properties = getAllRentalProperty()
     return rental_properties
 
 
 @router.get("/{shortname}",
             description="get rental unit by using rental shortname",
-            response_model=RentalProperty,
+            response_model=RentalPropertyRead,
             status_code=status.HTTP_200_OK)
-def get_rental_unit_by_shortname(*,
-                                 session: Session = Depends(get_session),
-                                 shortname: str):
+async def get_rental_unit_by_shortname(*,
+                                       session: Session = Depends(get_session),
+                                       shortname: str):
     stmt = select(RentalProperty).\
            where(RentalProperty.property_shortname == shortname)
     result = session.exec(stmt)

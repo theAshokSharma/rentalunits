@@ -185,11 +185,11 @@
             "association_url" : "",
             "association_username" : "",
             "association_pwd" : "",
-            "lock_master_key" : null,
-            "garage_key_code" : null,
-            "mail_box_number" : null,
+            "lock_master_key" : "179186, user1: 3986, user2: 5236",
+            "garage_key_code" : "1202",
+            "mail_box_number" : "11",
             "property_info" : "https://web.co.wright.mn.us/proptax/results.asp?pid=118360011020",
-            "notes" : null,
+            "notes" : "door code: 0208",
             "association_mgmt_id" : 2
         }  
         

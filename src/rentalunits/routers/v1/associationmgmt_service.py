@@ -20,7 +20,6 @@ def get_association_management_list(*,
                              session: Session = Depends(get_session)):
     stmt = select(AssociationManagement)
     association_mgmts = session.exec(stmt).all()
-    
     return association_mgmts
 
 
